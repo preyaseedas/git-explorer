@@ -8,7 +8,6 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
-import Favorites from './src/screens/Favorites';
 import RepositoryDetails from './src/screens/RepositoryDetails';
 import SplashScreen from './src/screens/SplashScreen';
 
@@ -31,7 +30,6 @@ function App(): React.JSX.Element {
               name="RepositoryDetails"
               component={RepositoryDetails}
             />
-            <Stack.Screen name="Favorites" component={Favorites} />
           </Stack.Navigator>
         </NavigationContainer>
       </PaperProvider>
