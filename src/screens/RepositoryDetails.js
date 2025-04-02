@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 0.8,
-    borderColor: '#8957e5',
+    borderColor: CommonColor.violet,
   },
   avatar: {height: 58, width: 58, borderRadius: 50},
   repoOwnerText: {

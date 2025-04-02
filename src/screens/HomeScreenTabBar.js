@@ -4,7 +4,9 @@ import HomeScreen from './HomeScreen';
 import Favorites from './Favorites';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
+
 const Tab = createBottomTabNavigator();
+//show a navigation bar on screen to navigate another Screen
 const HomeScreenTabBar = () => {
   return (
     <Tab.Navigator>
@@ -17,20 +19,12 @@ const HomeScreenTabBar = () => {
             focused ? (
               <Image
                 source={require('../assets/image/homeBlue.png')}
-                style={{
-                  height: 24,
-                  width: 24,
-                  marginRight: 5,
-                }}
+                style={styles.tabBarIcon}
               />
             ) : (
               <Image
                 source={require('../assets/image/homeBlack.png')}
-                style={{
-                  height: 24,
-                  width: 24,
-                  marginRight: 5,
-                }}
+                style={styles.tabBarIcon}
               />
             ),
         }}
@@ -45,18 +39,12 @@ const HomeScreenTabBar = () => {
             focused ? (
               <Image
                 source={require('../assets/image/starBlue.png')}
-                style={{
-                  height: 24,
-                  width: 24,
-                }}
+                style={styles.fabIcon}
               />
             ) : (
               <Image
                 source={require('../assets/image/starBlack.png')}
-                style={{
-                  height: 24,
-                  width: 24,
-                }}
+                style={styles.fabIcon}
               />
             ),
         }}
@@ -68,11 +56,13 @@ const HomeScreenTabBar = () => {
 export default HomeScreenTabBar;
 
 const styles = StyleSheet.create({
-  changeBackground: {
-    alignItems: 'center',
-    width: 60,
-    height: 30,
-    borderRadius: 50,
-    backgroundColor: '#31ADD6',
+  homeIcon: {
+    height: 24,
+    width: 24,
+    marginRight: 5,
+  },
+  fabIcon: {
+    height: 24,
+    width: 24,
   },
 });

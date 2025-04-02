@@ -5,6 +5,7 @@ import {useDispatch} from 'react-redux';
 import {setTempRepo} from '../redux/RepositoryData';
 import {CommonColor} from './Color';
 
+//This component shows how the card looks like
 const RepoCard = ({item}) => {
   const navigation = useNavigation();
   const dispatch = useDispatch();
@@ -12,7 +13,9 @@ const RepoCard = ({item}) => {
   return (
     <TouchableOpacity
       onPress={() => {
+        {/** diapatch the temporary reposity to redux */}
         dispatch(setTempRepo(item));
+       {/**navigate to  the particular repository details */}
         navigation.navigate('RepositoryDetails');
       }}
       style={styles.repositoryListContainer}>
@@ -53,7 +56,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 0.8,
-    borderColor: '#8957e5',
+    borderColor: CommonColor.violet,
   },
   avatar: {
     width: 48,
@@ -66,12 +69,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 5,
   },
   repoNameText: {
-    color: CommonColor.black,
+    color:'black',
     fontSize: 20,
     fontWeight: '500',
   },
   descText: {
-    color: CommonColor.grey,
+    color: 'grey',
     fontSize: 13,
     letterSpacing: 0.2,
   },
